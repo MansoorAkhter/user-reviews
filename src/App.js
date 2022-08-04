@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ResponsiveAppBar from "./home/Navbar";
+import bg from "./home/bg.mp4";
+// import Review from "./Review";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ResponsiveAppBar />
+      {/* <Review /> */}
+      <div className="bgOverlay">
+        <h1>HELLO EVERYONE</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat fugiat aspernatur rerum amet laudantium magnam consectetur nam ex! Animi inventore quia id odit deserunt libero dolore dolorum repellendus dolores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. At odio rerum, ratione vitae tempora nobis et in, repellendus, suscipit laboriosam iste labore quisquam perferendis odit doloribus? Similique, sint! Assumenda, illo.</p>
+        <button className="videoBtn">Pause</button>
+      </div>
+
+      <div className="bgContent">
+        <video src={bg} autoPlay loop className="bg-video" />
+      </div>
+
+      <div className="bgc"></div>
+      <div className="bgc1"></div>
+    </>
   );
 }
 
